@@ -1,0 +1,162 @@
+Inicio - 22/01/2026
+Profesor: Manuel Martinez
+75% asistencia
+https://campus.pue.es/general/prt/prg/curso.php?codcurso=C34999&btn=1
+
+60 horas de curso
+IA becario perfecto para un becario
+Toda la RAM 2026 ya esta vendida para alimentar la IA
+Automatizacion de la IA
+
+OpenAI se hacia sobre infra de Azure.
+Tengo mis datos en azure
+Tenant de mi cliente voy a hacer 
+La version gratuita va entrenar futuros modelos.
+La version de Business enterprise 
+27000 de seguridad no tienen ISO de Azure si que te lo da
+OpenIA no te lo da.
+
+Diferencia de lo Normativo entre Azure y OpenIA que no te proporciona ISO's 
+Azure AIFoundry -> mismo endpoint Plataforma como servicio de AI.
+Copilot -> son agentes ayudan cosas concretas.
+copilot studio modelos de AIFoundry
+
+Ingenieria de Promps -> System promp debe capar para no decir
+LLM es un niño pequeño
+¿Como securizas el LLM? --> es el gran agujero seguridad.
+
+El software de futuro ya no será programado sino LLM's.
+
+AZ-900 CURSO
+
+Azure infra como servicio -> IaaS
+PaaS -> Solución facil, te centras en el ambito del codigo (AppService)
+
+"Azure Active Directory" y te sincronizo con tu local.
+Windows 365 link -> pisa papeles solo te permite conectarte al cloud.
+
+Reservas --> es un hardware fijo pero lo puedes devolverlo
+Plan de ahorro --> te comprometes a computacion pero no al hardware
+
+Azure App Services no acepta GPU y no hay solución de balanceo que valide la saturacion de un nodo sino que es roundrobin
+Principio KISS -> appservice vs contenedor
+
+Modelo sentimental
+Modelo de IA que se pueda pagar.
+
+ChatGPT es muy bueno pero dentro de Foundry
+
+Microsoft Fabric_
+El de F64 cuesta 4.251€
+
+sinaps - plataforma bigdata saas fabric.
+databric
+
+aceptacion cognitiva del nuevo conocimiento.
+
+________________________________________________________________________________________________________________
+27/01/2026
+
+Defender for identity --> Acceso Condicional
+Seguridad del dato -> puerview (gobernanza del dato)
+multitud de Conectores y dispone de una IA que se conecta valida los datos 
+
+Defender for Cloud
+Defender for endpoint vulnerabilidades de los equipos.
+
+Sentinel si detecta dispositivos vulnerables aplica directivas... pues dispone de siem y soar
+
+hay impoderables en los costes de Azure... puede existir anomalias, se debe aplicar presupuestos
+Azure cost Management -> hay un delay en los costes facturados. 
+
+Azure Arc -> amplia el management de servidores locales desde la nube.
+
+Application insights una maravilla. Esto coges una aplicación. Y la activas e insight, y ves las tripas de la aplicación sin tener el código fuente.
+
+Opciones en Local para jugar con la IA
+
+La version chat gratuita no está capado
+
+Download LM Studio (este software es hola mundo)
+
+Es mejor un modelo pequeño optimizado
+
+Puedes bajarte modelos desde LM Studio
+Si no tienes gráfica puedes tirar del la CPU
+
+huggingface --> comunidad de modelos
+llama 3,1 8 billones de parámetros
+8b Instruct para targetas de 8gB RAM
+
+La regla es 1 billon 1GB
+Mistral 3 3B es maravilloso para trastear en local (es multiidioma) --> se te baja 3GB de disco y te tiene que caber en la tarjeta gráfica.
+
+sapphire AMD Radeon AI PRO r9700 32GB
+tarjeta gráfica para IA
+
+La IA no es determinista
+
+Un Agente es una llamada a un LLM, donde el system Prompt que tú le has puesto es lo que tiene que hacer el agente.
+
+Modelo:
+microsoft phi 4 mini instruct (modelos limpio con muchos menos parámetros pero de mayor valor)
+No te dicen el data set del entrenamiento.
+
+Uncensored -> Para poder preguntar sin censura
+
+https://ollama.com/
+
+Cuando quieres montarte. Un servidor centralizado.
+Que me cargue los modelos de LLM y a partir de ahí lo expongo a través de una web a P. I.
+Y los diferentes programas se conectan a este por llamada Http para pedirle la respuesta.
+
+http://localhost:11434/api/generate
+{
+    "model": "mistral",
+    "prompt": "Why is the sky blue?"
+}
+
+
+1. Ciberseguridad y Gestión de Riesgos
+
+Sistemas Legados: Se discute el riesgo de mantener hardware y software antiguos (como sistemas en COBOL o monitores de fósforo) que son críticos pero difíciles de migrar debido a la falta de recambios y conocimiento técnico.
+Incidentes Reales: Se mencionan ataques de ransomware sufridos por instituciones como el Hospital Clínic, señalando que, aunque se recupere el servicio, la filtración de datos sensibles es un daño irreparable.
+Estrategias de Defensa:
+Zero Trust: Se explica el cambio hacia el modelo de "Confianza Cero", donde se evalúa continuamente cada intento de acceso sin importar el origen.
+Defensa en Profundidad: La seguridad debe aplicarse en múltiples capas: física, identidad, red, aplicación y datos.
+Herramientas de Microsoft: Se detallan servicios como Sentinel (orquestación), Defender (para identidades, endpoints y nube) e Intune (gestión de dispositivos).
+
+2. Infraestructura y Gestión en Azure
+Gobernanza y Costes: Se destaca la importancia de las etiquetas (tags) para entender la factura de Azure y los bloqueos de recursos para evitar eliminaciones accidentales o modificaciones de configuración.
+Monitorización: Se menciona Application Insights para analizar el rendimiento interno de las aplicaciones y el uso de Kusto Query Language (KQL) para consultar logs.
+
+3. Inteligencia Artificial (IA) Generativa
+
+Modelos Locales (SLM): Se explora la posibilidad de ejecutar modelos de lenguaje pequeños (Small Language Models) en hardware local para garantizar la privacidad de los datos y ahorrar costes de tokens en la nube.
+Despliegue y Hardware: Los participantes discuten el uso de herramientas como LM Studio u Ollama y la potencia de tarjetas gráficas (como la serie NVIDIA RTX 4090) para correr estos modelos con fluidez.
+Adopción de Copilot: Se debate sobre la baja tasa de adopción de licencias de Copilot en las empresas y cómo la eficacia de la IA depende de que el usuario sea un perfil "senior" que sepa acotar los prompts.
+
+4. Metodologías de Desarrollo
+Se introduce el concepto de Security by Design y cómo integrar pruebas de ciberseguridad dentro del ciclo de TDD (Test Driven Development) para que ninguna funcionalidad nueva se entregue sin ser segura.
+________________________________________________________________________________________________________________
+29/01/2026
+
+ML Net
+GPT 4.1 para codigo es muy  y es gratuito
+Onnix Runtime GenAI genial para insertar un slm en tu codigo
+https://huggingface.co/
+Modelo instruido --> son modelos supervisado y solo carga INFO relevante
+
+Examen
+https://www.examprepper.co/
+
+Efecto Dunning - Kruger --> el monte de la ignorancia
+Nivel de competencia Real vs Nivel competencia Auto-percibida
+
+Cima del "Monte de la Ignorancia"
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+# Ignorar un archivo específico
+.tokenGithub.txt
+
+# Ignorar una carpeta entera (muy común para librerías o modelos de IA)
+node_modules/
+venv/
+__pycache__/
+
+# Ignorar todos los archivos que terminen en una extensión
+*.log
+*.env
+
+
