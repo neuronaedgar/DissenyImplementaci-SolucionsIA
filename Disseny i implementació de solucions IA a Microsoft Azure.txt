@@ -3,6 +3,14 @@ Profesor: Manuel Martinez
 75% asistencia
 https://campus.pue.es/general/prt/prg/curso.php?codcurso=C34999&btn=1
 
+
+Desarrollo de soluciones de inteligencia artificial en Azure
+Curso AI-102T00-A: Desarrollo de soluciones de IA en Azure
+https://learn.microsoft.com/es-es/training/courses/ai-102t00
+
+AI Engineer Exercises
+https://microsoftlearning.github.io/AI-102-AIEngineer/
+
 60 horas de curso
 IA becario perfecto para un becario
 Toda la RAM 2026 ya esta vendida para alimentar la IA
@@ -152,11 +160,64 @@ https://www.examprepper.co/
 
 Efecto Dunning - Kruger --> el monte de la ignorancia
 Nivel de competencia Real vs Nivel competencia Auto-percibida
-
 Cima del "Monte de la Ignorancia"
 
+Token palabra independiente
+
+LLM es un horaculo de palabras... 
+Un SLM instruido por los expertos de Matemáticas no tiene basura.
+Gran modelo 
+Modelos instruidos con informacion apropiada.
+GhatGPT se ha entrenado con mucha basura
+
+IA Generativa es salida con una respuesta generada
+
+La magia esta en el system promp
+El modelo debe ser securizado para que un system promp no pueda ser modificado por un user promp.
+Promt - aviso sistema: 
+
+https://www.lakera.ai/lakera-gandalf
+https://github.com/ZapDos7/lakera-gandalf
+
+Los LLM no tiene memoria... El historial es el reenvio de lo almacenado
+
+Microsoft Foundry -> repositorio poder instanciar endpoint LLM. 
+OpenAI 
+Pagar por tokens
+Agentes que puedan automatizar n8n
+  
+Laboratorios:
+https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-q62wb32gz
+
+tienes 2 horas para hacer pruebas
+
+1. Aplicación Práctica de Visión Artificial
+
+Entrenamiento Supervisado: Se realiza una demostración de clasificación de imágenes (frutas como kiwis y tomates) utilizando un dataset etiquetado en carpetas.
+Ciclo de Desarrollo: Se explica el proceso desde la creación del dataset, el inicio del entrenamiento (que duró aproximadamente 65 segundos para 25 imágenes por categoría) hasta la fase de inferencia o predicción.
+Modelo Utilizado: Se aclara que, aunque parece machine learning tradicional, se está utilizando Deep Learning (aprendizaje profundo) mediante una red neuronal convolucional basada en Tensorflow y una técnica de Transfer Learning con el modelo YOLO.
+Caso de Uso Real: Manuel comparte un ejemplo personal donde usó un Arduino con cámara para monitorizar un termostato analógico de una caldera. Entrenó un modelo para reconocer la temperatura mediante fotos y activar una electroválvula automáticamente.
+
+2. Despliegue y Consumo de Modelos
+
+Publicación: Una vez entrenado el modelo, se discute cómo consumirlo a través de una aplicación de consola o publicarlo como una Web API en la nube (Azure App Service) o en servidores locales de la empresa.
+Modelos en Local (SLM): Se explora el uso de modelos de lenguaje pequeños (Small Language Models) ejecutados localmente para mayor eficiencia y privacidad, recomendando herramientas como ONNX Runtime frente a otras opciones como Ollama.
 
 
+3. Arquitectura y Estrategias de IA Corporativa
+
+RAG (Retrieval-Augmented Generation): Se debate sobre cómo alimentar a la IA con datos específicos de la empresa utilizando bases de datos vectoriales y servicios como Azure AI Search para indexar documentos confidenciales y mejorar las respuestas del agente.
+Gestión de Tokens y Contexto: Se explica que el "contexto" son las palabras de entrada y salida, y se mencionan estrategias para reducir costes de tokens, como el uso de índices en lugar de enviar documentos enteros en cada petición.
+Validación y Pruebas: Ante cambios de modelos, se recomienda realizar pruebas en paralelo y baterías de validación para asegurar que la nueva versión del modelo no degrade la calidad de las respuestas anteriores.
+
+4. Ética e Impacto Laboral
+
+IA como Asistente: Se refuerza la idea de que la IA no reemplaza a los programadores o expertos, sino que los ayuda a automatizar tareas repetitivas de bajo valor añadido, permitiéndoles centrarse en la especialización y la supervisión humana.
+Responsabilidad: Se subraya la importancia de la transparencia, indicando siempre al usuario cuándo está interactuando con una IA.
+
+________________________________________________________________________________________________________________
+03/02/2026
+Lab: AI-102T00-A-CEP-M01L01
 
 
 
