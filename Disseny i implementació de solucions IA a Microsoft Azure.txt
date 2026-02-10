@@ -3,6 +3,8 @@ Profesor: Manuel Martinez
 75% asistencia
 https://campus.pue.es/general/prt/prg/curso.php?codcurso=C34999&btn=1
 
+https://github.com/neuronaedgar/DissenyImplementaci-SolucionsIA
+
 
 Desarrollo de soluciones de inteligencia artificial en Azure
 Curso AI-102T00-A: Desarrollo de soluciones de IA en Azure
@@ -218,6 +220,126 @@ Responsabilidad: Se subraya la importancia de la transparencia, indicando siempr
 ________________________________________________________________________________________________________________
 03/02/2026
 Lab: AI-102T00-A-CEP-M01L01
+
+En esta clase, el enfoque fue eminentemente práctico, centrándose en la implementación de soluciones de IA en Azure y la interacción con modelos de lenguaje.
+
+Aquí tienes el resumen de los puntos clave tratados:
+
+1. Prácticas en el Laboratorio (Azure AI Services)
+Configuración de Recursos: Gran parte del inicio se dedica a la creación y despliegue de recursos de Azure OpenAI y AI Services.
+
+Modelos de Lenguaje: Se trabaja con modelos como GPT-3.5 Turbo y GPT-4, configurando parámetros como la Temperatura (para controlar la creatividad vs. determinismo) y las Tokens (límite de respuesta).
+
+Seguridad y Despliegue: Se discute la importancia de las "Content Filters" (filtros de contenido) para evitar respuestas inapropiadas en entornos corporativos.
+
+2. Ingeniería de Prompts (Prompt Engineering)
+System Message (Mensaje de Sistema): Se explica cómo definir el comportamiento del modelo (ej. "Eres un asistente experto en marketing") para acotar las respuestas.
+
+Few-Shot Learning: Manuel muestra cómo dar ejemplos al modelo dentro del prompt para que aprenda el formato o tono deseado antes de responder.
+
+Chat vs. Completado: Se analiza la diferencia entre modelos diseñados para seguir una conversación y modelos para completar texto.
+
+3. Desarrollo e Integración (C# y Python)
+Consumo de API: Los participantes ven cómo llevar lo probado en el "Playground" de Azure a código real utilizando el SDK de Azure OpenAI.
+
+Variables de Entorno: Se recalca la buena práctica de no escribir las claves de API directamente en el código (hardcoding), sino usar variables de entorno o archivos de configuración.
+
+Flujo de Trabajo: Se explica que la IA suele ser una parte pequeña de una aplicación más grande, donde el programa hace una petición, recibe un JSON y luego procesa esa información para el usuario final.
+
+4. Inteligencia Artificial Responsable
+Sesgos y Alucinaciones: Se debate sobre la tendencia de los modelos a "inventar" información de manera muy convincente y la necesidad de la supervisión humana.
+
+Privacidad de Datos: Se asegura que, al usar Azure OpenAI, los datos enviados no se utilizan para entrenar los modelos globales de OpenAI, garantizando la privacidad empresarial.
+
+5. Temas Varios y Debates
+Adopción Tecnológica: Existe un debate sobre la velocidad a la que avanzan estas herramientas y la dificultad de las empresas para mantener el ritmo de actualización.
+
+Ciberseguridad: Se mencionan de paso incidentes recientes (como el de Cloudflare o temas de piratería en el fútbol) como ejemplos de la importancia de la seguridad en la infraestructura actual.
+________________________________________________________________________________________________________________
+05/02/2026
+https://jsfuck.com/#  (meter codigo oculto html)
+
+https://msfthub.com/labs/azure/ai-102/
+
+Concepto de RAG
+Si nos cobran por token, 
+Cogemos un servicio cognitivo de Azure, te montas una cache para futuras preguntas.
+Azure AI search y crea un indice semantico de busqueda
+
+El problema no están en el coste de particionado sino en la cantidad de datos que tienes al LLM para devolverte la respuesta.
+
+Una PTU (Processing Token Unit) es una unidad de capacidad de procesamiento reservada que garantiza un nivel 
+determinado de rendimiento (throughput) para la ejecución de modelos de inteligencia artificial,
+permitiendo asegurar latencia, concurrencia y costes predecibles en entornos productivos.
+
+Laboratorio:
+AI-102T00-A-CEP-M01L03
+
+Username
+XLab-N5Y-056@xtremelabs.us 
+Temporary Access Pass
+j6vw^8@z 
+
+git clone https://github.com/microsoftlearning/mslearn-ai-studio mslearn-ai-foundry
+cd mslearn-ai-foundry/labfiles/chat-app/python
+#crear un entorno virtual (virtual environment) de Python
+python -m venv labenv  
+# Cambia el intérprete de Python activo al del entorno
+./labenv/bin/Activate.ps1
+# Instalar las dependencias definidas requirements.txt y librerías azure-identity, azure-ai-projects y openai
+pip install -r requirements.txt azure-identity azure-ai-projects openai
+# abre un editor como un vi
+code .env
+code chat-app.py
+
+# Add references
+from azure.identity import DefaultAzureCredential
+from azure.ai.projects import AIProjectClient
+from openai import AzureOpenAI
+
+# Initialize the project client
+project_client = AIProjectClient(            
+        credential=DefaultAzureCredential(
+            exclude_environment_credential=True,
+            exclude_managed_identity_credential=True
+        ),
+        endpoint=project_endpoint,
+    )
+
+# Get a chat client
+openai_client = project_client.get_openai_client(api_version="2024-10-21")
+
+prompt = [ {"role": "system", "content": "You are a helpful AI assistant that answers questions."}]
+
+# Get a chat completion
+prompt.append({"role": "user", "content": input_text})
+   response = openai_client.chat.completions.create(
+            model=model_deployment,
+            messages=prompt)
+completion = response.choices[0].message.content
+print(completion)
+prompt.append({"role": "assistant", "content": completion})
+
+
+AI-102T00-A-CEP-M01L04
+Username=XVUser12084@xtremelabs.us 
+Password=U&8xK89t 
+AI hub resource
+
+
+Recurso de Microsoft Foundry - Microsoft Foundry resource
+Recurso del centro de IA - AI hub resource
+________________________________________________________________________________________________________________
+10/02/2026
+
+Security by default en IA no existe
+
+
+
+
+
+
+
 
 
 
